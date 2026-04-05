@@ -1,0 +1,35 @@
+{
+  "tools_file": "CS728_PA3\\data\\tools.json",
+  "queries_file": "CS728_PA3\\data\\train_queries.json",
+  "num_tools": 100,
+  "num_queries": 1500,
+  "top_k": 5,
+  "columns": {
+    "tool_id_col": "tool_name",
+    "tool_name_col": "tool_name",
+    "tool_desc_col": "description",
+    "query_id_col": "qid",
+    "query_col": "text",
+    "gold_col": "gold_tool_name"
+  },
+  "metrics": [
+    {
+      "method": "BM25",
+      "recall@1": 0.248,
+      "recall@5": 0.43533333333333335,
+      "seconds": 0.8561251163482666
+    },
+    {
+      "method": "msmarco-MiniLM",
+      "recall@1": 0.38066666666666665,
+      "recall@5": 0.6046666666666667,
+      "seconds": 34.7376127243042
+    },
+    {
+      "method": "UAE-large-v1",
+      "recall@1": 0.6293333333333333,
+      "recall@5": 0.8866666666666667,
+      "seconds": 479.59173345565796
+    }
+  ]
+}
